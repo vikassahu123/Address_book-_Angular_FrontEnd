@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(270deg, #6bcaf0, #eb8a3a);
+  background-size: 400% 400%;
+  animation: gradientBG 6s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.welcome-card {
+  padding: 40px;
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  background: linear-gradient(145deg, #f0f0f0, #dcdcdc);
+  border-radius: 20px;
+  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.welcome-card:hover {
+  transform: scale(1.05);
+  box-shadow: 12px 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+mat-card-title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #222;
+}
+
+.icon {
+  font-size: 34px;
+  margin-right: 12px;
+  color: #ff4081;
+}
+
+mat-card-subtitle {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.fancy-button {
+  width: 100%;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 14px;
+  background: linear-gradient(90deg, #ff4081, #ff9800);
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 4px 4px 12px rgba(255, 64, 129, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.fancy-button:hover {
+  background: linear-gradient(90deg, #ff9800, #ff4081);
+  transform: translateY(-3px);
+  box-shadow: 6px 6px 15px rgba(255, 64, 129, 0.4);
+}
+
+.address-card {
+  max-width: 900px;
+  margin: auto;
+  padding: 25px;
+  background: linear-gradient(180deg, #e0f7fa, #80deea);
+  border-radius: 12px;
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #e3f2fd;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+  padding: 14px;
+  text-align: left;
+}
+
+table th {
+  background: #7a6a71;
+  color: white;
+  font-weight: bold;
+}
+
+mat-card-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+button {
+  margin-bottom: 15px;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: white;
+  padding: 12px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #06baf1, #e78402);
+  transform: translateY(-2px);
+}
+
+.mat-elevation-z8 {
+  border-radius: 12px;
+}

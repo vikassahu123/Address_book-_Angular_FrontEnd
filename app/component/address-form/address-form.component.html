@@ -1,0 +1,29 @@
+<form [formGroup]="addressForm" (ngSubmit)="submitForm()">
+    <div>
+      <label>Name</label>
+      <input type="text" formControlName="name" />
+      <div *ngIf="addressForm.controls['name'].invalid && addressForm.controls['name'].touched">
+        Name is required.
+      </div>
+    </div>
+  
+    <div>
+      <label>Email</label>
+      <input type="email" formControlName="email" />
+      <div *ngIf="addressForm.controls['email'].invalid && addressForm.controls['email'].touched">
+        <span *ngIf="addressForm.controls['email'].errors?.['required']">Email is required.</span>
+        <span *ngIf="addressForm.controls['email'].errors?.['email']">Invalid email format.</span>
+      </div>
+    </div>
+  
+    <div>
+      <label>Phone</label>
+      <input type="text" formControlName="phone" />
+      <div *ngIf="addressForm.controls['phone'].invalid && addressForm.controls['phone'].touched">
+        <span *ngIf="addressForm.controls['phone'].errors?.['required']">Phone is required.</span>
+        <span *ngIf="addressForm.controls['phone'].errors?.['pattern']">Only numbers allowed.</span>
+      </div>
+    </div>
+  
+    <button type="submit" [disabled]="addressForm.invalid">Submit</button>
+  </form>
